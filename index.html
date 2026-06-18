@@ -1,99 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
-
-    <meta name="description" content="Personal GitHub Pages website">
-    <meta name="author" content="Your Name">
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr Asad Malik | Academic Portfolio</title>
+  <meta name="description" content="Academic portfolio website for Dr Asad Malik - Lecturer, cybersecurity researcher, multimedia forensics, watermarking, cryptography, and AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#070b18; --bg2:#0d1224; --card:rgba(255,255,255,.08); --card2:rgba(255,255,255,.12);
+      --text:#edf2ff; --muted:#aab5d6; --line:rgba(255,255,255,.16); --gold:#f6c85f; --cyan:#62e7ff; --pink:#ff6bb5;
+      --green:#7fffb7; --shadow:0 24px 70px rgba(0,0,0,.42); --radius:28px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.65;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 15% 10%,rgba(98,231,255,.25),transparent 28%),radial-gradient(circle at 85% 5%,rgba(255,107,181,.22),transparent 30%),radial-gradient(circle at 50% 90%,rgba(246,200,95,.12),transparent 35%),linear-gradient(135deg,#070b18,#111633 45%,#070b18);z-index:-2}
+    body:after{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:46px 46px;mask-image:linear-gradient(to bottom,black,transparent 85%);z-index:-1}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1180px,92vw);margin:auto}.nav{position:sticky;top:0;z-index:10;backdrop-filter:blur(18px);background:rgba(7,11,24,.66);border-bottom:1px solid var(--line)}
+    .nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:900;letter-spacing:.2px}.brand span{color:var(--gold)}.links{display:flex;gap:22px;color:var(--muted);font-size:14px}.links a:hover{color:var(--text)}
+    .hero{padding:86px 0 54px;display:grid;grid-template-columns:1.1fr .9fr;gap:38px;align-items:center}.eyebrow{display:inline-flex;gap:10px;align-items:center;border:1px solid var(--line);border-radius:999px;padding:8px 13px;background:rgba(255,255,255,.07);color:var(--muted);font-size:13px}.dot{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 20px var(--green)}
+    h1{font-family:Playfair Display,serif;font-size:clamp(50px,8vw,92px);line-height:.94;margin:22px 0 18px;letter-spacing:-3px}.grad{background:linear-gradient(90deg,var(--cyan),var(--gold),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}.lead{font-size:20px;color:var(--muted);max-width:720px}.cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}.btn{padding:14px 18px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.09);font-weight:800}.btn.primary{background:linear-gradient(135deg,var(--cyan),var(--pink));color:#08101d;border:0}.btn:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(0,0,0,.25)}
+    .portrait{position:relative;border-radius:var(--radius);background:linear-gradient(160deg,rgba(98,231,255,.18),rgba(255,107,181,.14));border:1px solid var(--line);box-shadow:var(--shadow);padding:28px;overflow:hidden}.portrait:before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(246,200,95,.16);right:-80px;top:-80px}.avatar{width:152px;height:152px;border-radius:38px;display:grid;place-items:center;background:linear-gradient(135deg,#18213e,#0a1024);border:1px solid var(--line);font-size:54px;font-weight:900;color:var(--gold);box-shadow:inset 0 0 50px rgba(98,231,255,.1)}
+    .role{margin-top:22px}.role h2{margin:0;font-size:28px}.role p{margin:8px 0;color:var(--muted)}.meta{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}.pill{border:1px solid var(--line);border-radius:18px;padding:13px;background:rgba(255,255,255,.06)}.pill strong{display:block;color:var(--gold);font-size:13px;text-transform:uppercase;letter-spacing:.8px}.pill span{font-weight:800}
+    section{padding:48px 0}.section-title{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:22px}h3{font-size:34px;margin:0;letter-spacing:-1px}.sub{color:var(--muted);max-width:650px}.grid{display:grid;gap:18px}.cards{grid-template-columns:repeat(3,1fr)}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:0 16px 45px rgba(0,0,0,.18)}.card:hover{background:var(--card2);transform:translateY(-3px)}.card h4{margin:0 0 10px;font-size:20px}.card p,.card li{color:var(--muted)}.stat{font-size:42px;font-weight:900;line-height:1;color:var(--gold)}
+    .timeline{position:relative}.item{display:grid;grid-template-columns:150px 1fr;gap:22px;padding:18px 0;border-bottom:1px solid var(--line)}.date{color:var(--cyan);font-weight:900}.item h4{margin:0}.item p{margin:5px 0 0;color:var(--muted)}
+    .chips{display:flex;gap:10px;flex-wrap:wrap}.chip{padding:9px 12px;border-radius:999px;background:rgba(98,231,255,.09);border:1px solid rgba(98,231,255,.26);color:#dffbff;font-weight:700;font-size:13px}.pub{padding:18px 0;border-bottom:1px solid var(--line)}.pub strong{color:#fff}.pub span{color:var(--muted)}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:18px}.footer{padding:40px 0 64px;color:var(--muted);text-align:center}.contact{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.contact a{border:1px solid var(--line);border-radius:18px;padding:16px;background:rgba(255,255,255,.07);font-weight:800}.contact a:hover{background:rgba(255,255,255,.13)}
+    @media(max-width:900px){.hero,.split{grid-template-columns:1fr}.cards,.contact{grid-template-columns:1fr 1fr}.links{display:none}.item{grid-template-columns:1fr}.meta{grid-template-columns:1fr 1fr}}@media(max-width:560px){.cards,.contact,.meta{grid-template-columns:1fr}h1{letter-spacing:-1px}.hero{padding-top:52px}}
+  </style>
 </head>
 <body>
+  <nav class="nav"><div class="wrap nav-inner"><a class="brand" href="#top">Dr Asad <span>Malik</span></a><div class="links"><a href="#profile">Profile</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div></div></nav>
+  <main id="top" class="wrap">
+    <section class="hero">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> Lecturer - School of IT, Monash University Malaysia</div>
+        <h1>Academic portfolio for <span class="grad">cybersecurity, AI & multimedia forensics.</span></h1>
+        <p class="lead">Dr Asad Malik is a lecturer and researcher working across multimedia security, image processing, watermarking, cryptography, DNN security, and DeepFake forensics.</p>
+        <div class="cta"><a class="btn primary" href="mailto:asad.malik@monash.edu">Email Me</a><a class="btn" href="#publications">View Publications</a><a class="btn" href="https://research.monash.edu/en/persons/asad-malik" target="_blank">Monash Profile</a></div>
+      </div>
+      <aside class="portrait">
+        <div class="avatar">AM</div><div class="role"><h2>Dr Asad Malik</h2><p>Member IEEE, APSIPA<br>Cybersecurity Group Leader at SOIT, Monash University Malaysia</p></div>
+        <div class="meta"><div class="pill"><strong>Current Role</strong><span>Lecturer</span></div><div class="pill"><strong>Since</strong><span>Dec 2023</span></div><div class="pill"><strong>Research</strong><span>Security + AI</span></div><div class="pill"><strong>Location</strong><span>Malaysia</span></div></div>
+      </aside>
+    </section>
 
-<header>
-    <div class="container">
-        <h1>Asad Malik</h1>
-        <p>Welcome to my GitHub Pages website.</p>
+    <section id="profile"><div class="section-title"><div><h3>Profile Highlights</h3><p class="sub">A concise professional snapshot adapted from the CV.</p></div></div><div class="grid cards"><div class="card"><div class="stat">22+</div><h4>Journal Articles</h4><p>Publications across IEEE Access, IEEE TDSC, IEEE TCSVT, Knowledge-Based Systems, JISA, Neurocomputing and more.</p></div><div class="card"><div class="stat">2025</div><h4>Cybersecurity Leadership</h4><p>Cybersecurity Group Leader at the School of IT, Monash University Malaysia.</p></div><div class="card"><div class="stat">1</div><h4>Indian Patent</h4><p>Solar Powered Human Detection Device for Emergency Exit, AI based.</p></div></div></section>
 
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </div>
-</header>
+    <section id="experience"><div class="section-title"><div><h3>Employment & Education</h3></div></div><div class="card timeline"><div class="item"><div class="date">Dec 2023 - Present</div><div><h4>Lecturer, Monash University Malaysia</h4><p>School of IT, Monash University Malaysia.</p></div></div><div class="item"><div class="date">Aug - Nov 2023</div><div><h4>Guest Faculty, Aligarh Muslim University</h4><p>Short-term faculty appointment in India.</p></div></div><div class="item"><div class="date">Jul 2021 - Jul 2023</div><div><h4>Assistant Professor, Aligarh Muslim University</h4><p>Teaching, academic administration and IT coordination.</p></div></div><div class="item"><div class="date">2021</div><div><h4>Post-doctoral Research, Okayama University</h4><p>Detection of Fake News on Social Media Platforms.</p></div></div><div class="item"><div class="date">2015 - 2020</div><div><h4>Ph.D. in Information Security</h4><p>Southwest Jiaotong University, China. Thesis: Reversible Data Hiding in Encrypted Images.</p></div></div></div></section>
 
-<main>
+    <section id="research"><div class="section-title"><div><h3>Research & Teaching</h3><p class="sub">Core academic areas and teaching portfolio.</p></div></div><div class="split"><div class="card"><h4>Research Interests</h4><div class="chips"><span class="chip">Multimedia Forensics</span><span class="chip">Watermarking</span><span class="chip">Cryptography</span><span class="chip">Image Processing</span><span class="chip">DNN Security</span><span class="chip">DeepFake Forensics</span></div></div><div class="card"><h4>Teaching Areas</h4><p>Artificial Intelligence, multi-agent systems, theory of computation, databases, statistical data analysis using R, C programming, MATLAB, web designing and information technology fundamentals.</p></div></div></section>
 
-<section id="hero">
-    <div class="container">
-        <h2>Build Something Amazing</h2>
-        <p>
-            This site is hosted free with GitHub Pages.
-        </p>
+    <section id="supervision"><div class="section-title"><div><h3>Supervision</h3></div></div><div class="grid cards"><div class="card"><h4>PhD - Robust Fingerprinting</h4><p>Design and analysis of robust fingerprinting and watermarking techniques for deep neural networks.</p></div><div class="card"><h4>PhD - Phishing Detection</h4><p>Efficient hybrid models for phishing detection under class imbalance.</p></div><div class="card"><h4>Master's - Ownership Verification</h4><p>Robust ownership verification for deep neural networks.</p></div></div></section>
 
-        <button id="ctaButton">
-            Say Hello
-        </button>
-    </div>
-</section>
+    <section id="publications"><div class="section-title"><div><h3>Selected Publications</h3><p class="sub">Representative research outputs from recent and high-impact venues.</p></div></div><div class="card"><div class="pub"><strong>Robust Text Watermarking Based on Modifying the Stroke Components of Chinese Characters.</strong> <span>IET Image Processing, 2025.</span></div><div class="pub"><strong>Enhancing robustness in video data hiding against recompression with a wide parameter range.</strong> <span>Journal of Information Security and Applications, 2024.</span></div><div class="pub"><strong>A Fast Method for Robust Video Watermarking Based on Zernike Moments.</strong> <span>IEEE Transactions on Circuits and Systems for Video Technology, 2023.</span></div><div class="pub"><strong>DeepFake Detection for Human Face Images and Videos: A Survey.</strong> <span>IEEE Access, 2022.</span></div><div class="pub"><strong>High-Capacity Reversible Data Hiding in Encrypted Images Using Multi-layer Embedding.</strong> <span>IEEE Access, 2020.</span></div></div></section>
 
-<section id="about">
-    <div class="container">
-        <h2>About</h2>
+    <section id="projects"><div class="section-title"><div><h3>Projects & Collaborations</h3></div></div><div class="grid cards"><div class="card"><h4>Content Credentials for Synthetic Media</h4><p>International collaboration funded by National Institute of Informatics Open Collaborative Research 2022. Co-PI: Dr Asad Malik.</p></div><div class="card"><h4>DISSIMILAR</h4><p>Detection of Fake News on Social Media Platforms, funded by Japan Science and Technology Agency.</p></div><div class="card"><h4>Encrypted Data & Information Hiding</h4><p>Ph.D. and research projects funded by NSFC, focused on video data hiding and artificial immune systems.</p></div></div></section>
 
-        <p>
-            Replace this text with your own introduction.
-            Explain who you are and what you build.
-        </p>
-    </div>
-</section>
+    <section id="awards"><div class="section-title"><div><h3>Awards & Service</h3></div></div><div class="split"><div class="card"><h4>Recognition</h4><p>High Impact Publication Award, Best Paper Award at IWDCF 2017, Chinese Government Scholarship for Ph.D., travel grant and multiple academic certificates.</p></div><div class="card"><h4>Academic Service</h4><p>Technical committee member for APSIPA Multimedia Security and Forensics, reviewer for ACM Computing Surveys, IEEE TDSC, IEEE TCSVT, IEEE Access, JISA and APSIPA ASC.</p></div></div></section>
 
-<section id="projects">
-    <div class="container">
-        <h2>Projects</h2>
-
-        <div class="cards">
-
-            <article class="card">
-                <h3>Project One</h3>
-                <p>Description of your project.</p>
-            </article>
-
-            <article class="card">
-                <h3>Project Two</h3>
-                <p>Description of your project.</p>
-            </article>
-
-            <article class="card">
-                <h3>Project Three</h3>
-                <p>Description of your project.</p>
-            </article>
-
-        </div>
-    </div>
-</section>
-
-<section id="contact">
-    <div class="container">
-        <h2>Contact</h2>
-
-        <p>Email: your@email.com</p>
-        <p>GitHub: github.com/yourusername</p>
-    </div>
-</section>
-
-</main>
-
-<footer>
-    <div class="container">
-        <p>&copy; <span id="year"></span> Your Name</p>
-    </div>
-</footer>
-
-<script src="script.js"></script>
-
+    <section id="contact"><div class="section-title"><div><h3>Connect</h3><p class="sub">Professional links and contact details.</p></div></div><div class="contact"><a href="mailto:asad.malik@monash.edu">Email</a><a href="https://research.monash.edu/en/persons/asad-malik" target="_blank">Monash</a><a href="https://scholar.google.com/citations?user=41rvEokAAAAJ&hl=en" target="_blank">Google Scholar</a><a href="https://www.researchgate.net/profile/Asad-Malik-20" target="_blank">ResearchGate</a></div></section>
+  </main>
+  <footer class="footer wrap">© 2026 Dr Asad Malik. Designed as a modern academic portfolio.</footer>
 </body>
 </html>
